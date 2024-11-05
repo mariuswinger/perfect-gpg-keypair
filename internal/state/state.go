@@ -186,7 +186,7 @@ func exportGpgKeys(state State, passphrase string, masterFingerprint string) tea
 		if privateKeyExportError != nil {
 			logger.Debugln(fmt.Sprintf("could not export private master key: %s\n", privateKeyExportError.Error()))
 		}
-		publicKeyExportError := utils.ExportPrivateMasterKey(passphrase, masterFingerprint, publicMasterKeyFilePath)
+		publicKeyExportError := utils.ExportPublicMasterKey(masterFingerprint, publicMasterKeyFilePath)
 		if publicKeyExportError != nil {
 			logger.Debugln(fmt.Sprintf("could not export public master key: %s\n", privateKeyExportError.Error()))
 		}
