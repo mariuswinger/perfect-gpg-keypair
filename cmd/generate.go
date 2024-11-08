@@ -107,7 +107,7 @@ func generate(mainState *state.State) error {
 		"You may now want to add the signing key to your git config\n" +
 			"This can be done with the following command in a git repository:\n" +
 			"  'git config user.signingkey [key_id]'\n" +
-			"Add '--global' to use the signing subkey globally" +
+			"Add '--global' to use the signing subkey globally " +
 			"the key_id to use is the 16 hex digits after 'sec#  rsa4096/'",
 	)
 	return nil
