@@ -62,6 +62,7 @@ func (state State) GenerateKeys() error {
 		return err
 	}
 
+	return fmt.Errorf("uh oh")
 	// Generate master keypair
 	logger.Debugf("generating master keypair\n")
 	generateMasterKeypairSpinner := spinner.NewSpinnerModel(
@@ -188,7 +189,7 @@ func exportGpgKeys(state State, passphrase string, masterFingerprint string) tea
 		}
 		publicKeyExportError := utils.ExportPublicMasterKey(masterFingerprint, publicMasterKeyFilePath)
 		if publicKeyExportError != nil {
-			logger.Debugln(fmt.Sprintf("could not export public master key: %s\n", privateKeyExportError.Error()))
+			logger.Debugln(fmt.Sprintf("could not export public master key: %s\n", publicKeyExportError.Error()))
 		}
 		subkeyExportError := utils.ExportSigningSubkey(passphrase, masterFingerprint, signingSubkeyFilePath)
 		if subkeyExportError != nil {
