@@ -64,10 +64,6 @@ func ValidateExpiry(expiry string) error {
 }
 
 func ValidatePassphrase(passphrase string) error {
-	// TODO: Allow empty?
-	if passphrase == "" {
-		return InvalidPassphraseError("can not be empty")
-	}
 	if regexp.MustCompile(`\s`).MatchString(passphrase) {
 		return InvalidPassphraseError("can not contain whitespace")
 	}
