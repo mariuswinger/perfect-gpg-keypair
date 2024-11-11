@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/mariuswinger/perfect-gpg-keypair/compare/v0.0.2...v0.0.3) (2024-11-11)
+
+
+### Miscellaneous Chores
+
+* release 0.0.3 ([e8a1995](https://github.com/mariuswinger/perfect-gpg-keypair/commit/e8a1995df22072f29fa3c8a07eec36ad5efb2491))
+
 ## 0.0.2 (2024-11-11)
 
 
