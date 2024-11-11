@@ -1,0 +1,13 @@
+
+name: "Push to main branch"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-release-please:
+    uses: ./.github/workflows/release-please.yaml
+    secrets:
+      RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
