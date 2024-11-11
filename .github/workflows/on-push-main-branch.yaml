@@ -11,8 +11,9 @@ jobs:
   build:
     uses: ./.github/workflows/build.yaml
 
-  run-release-please:
+  release:
     needs: [build]
-    uses: ./.github/workflows/release-please.yaml
+    uses: ./.github/workflows/release.yaml
     secrets:
       RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+
