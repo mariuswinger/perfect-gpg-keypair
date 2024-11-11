@@ -7,7 +7,12 @@ on:
       - main
 
 jobs:
+
+  build:
+    uses: ./.github/workflows/build.yaml
+
   run-release-please:
+    needs: [build]
     uses: ./.github/workflows/release-please.yaml
     secrets:
       RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
