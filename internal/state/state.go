@@ -62,7 +62,6 @@ func (state State) GenerateKeys() error {
 		return err
 	}
 
-	return fmt.Errorf("uh oh")
 	// Generate master keypair
 	logger.Debugf("generating master keypair\n")
 	generateMasterKeypairSpinner := spinner.NewSpinnerModel(
