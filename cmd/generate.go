@@ -106,9 +106,13 @@ func generate(mainState *state.State) error {
 	utils.InfoPrint(
 		"You may now want to add the signing key to your git config\n" +
 			"This can be done with the following command in a git repository:\n" +
-			"  'git config user.signingkey [key_id]'\n" +
+			"  'git config user.signingkey <GPG_SIGNING_SUBKEY_ID>'\n" +
 			"Add '--global' to use the signing subkey globally " +
-			"the key_id to use is the 16 hex digits after 'sec#  rsa4096/'",
+			"the key_id to use is the 16 hex digits after 'ssb  rsa4096/' for the " +
+			"signing subkey (i.e. the one with '[S]' after it).\n" +
+			"The public key can be exported by running: \n" +
+			"  'gpg --armor --export <GPG_PRIMARY_KEY_ID>'",
 	)
+
 	return nil
 }
