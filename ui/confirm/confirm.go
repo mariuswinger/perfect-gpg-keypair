@@ -35,7 +35,7 @@ func Confirm(prompt string) (bool, error) {
 	confirm_form := createThemedConfirmForm(prompt, &choice)
 
 	if err := confirm_form.Run(); err != nil {
-		return false, fmt.Errorf("Unable to confirm user info: %w", err)
+		return false, fmt.Errorf("unable to confirm: %w", err)
 	}
 
 	return choice, nil
